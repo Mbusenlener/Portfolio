@@ -9,5 +9,8 @@ The average cross-fold accuracy after training in the lyrics condition was 37.0%
 ![confusion_matrix_run1](https://github.com/user-attachments/assets/8cca3fe5-cd51-4763-aa15-f47a61627895)
 #### Lyrics-Omitted Condition: 
 ![confusion_matrix_run1_no_lyrics](https://github.com/user-attachments/assets/7f5a2727-0453-46db-913c-59e543a2d121)
-
+## Citations:
+* J. S. Snyder and E. W. Large. Gamma-band activity reflects the metric structure of rhythmic tone sequences. Cognitive Brain Research, 24:117–126, 2005.
+* Vernon J. Lawhern, Amelia J. Solon, Nicholas R. Waytowich, Stephen M. Gordon, Chou P. Hung, Brent J. Lance. EEGNet: A Compact Convolutional Network for EEG-based Brain-  Computer Interfaces. J. Neural Eng. 15 056013, 2018
+* S. Stober, A Stemin, A.M. Owen, and lA. Grahn, "Towards music imagery information retrieval: Introducing the OpenMIIR dataset of EEG recordings from music perception and imagination;' in 16th International Society for Music Information Retrieval Conference (ISMIR), 2015, pp. 763- 769.
 
