@@ -23,8 +23,26 @@ https://github.com/user-attachments/assets/1c21fd01-e72e-4f06-a851-7c290275b293
 
 https://github.com/user-attachments/assets/6d243b2d-efc2-48d3-99cb-6e436e243c42
 
-
-
+## Citations: 
+  ```bibtex
+  @misc{performer_pytorch,
+    author = {Phil Wang},
+    title = {Performer - Pytorch},
+    year = {2022},
+    url = {https://github.com/lucidrains/performer-pytorch},
+  }
+  @article{defossez2022highfi,
+    title={High Fidelity Neural Audio Compression},
+    author={Défossez, Alexandre and Copet, Jade and Synnaeve, Gabriel and Adi, Yossi},
+    journal={arXiv preprint arXiv:2210.13438},
+    year={2022}
+ }
+  @inproceedings{copet2023simple,
+    title={Simple and Controllable Music Generation},
+    author={Jade Copet and Felix Kreuk and Itai Gat and Tal Remez and David Kant and Gabriel Synnaeve and Yossi Adi and Alexandre Défossez},
+    booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+    year={2023},
+ }
 
 
 
