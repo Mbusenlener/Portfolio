@@ -9,3 +9,22 @@ After training, this model can generate unique musical sequences by taking a tex
 
 ## Results
 I trained this model for 20k steps with a batch size of 200 using AdamW optimizer. Training was deployed on one L4 GPU in a GCP VM instance. The model did not fully converge as I stopped training early since this was just a personal project using GCP free credits. However, even with a limited amount of training, my music transformer learned to produce relatively musical sounding sequences, despite some noticeable artifacts and noise. Below are four examples with corresponding text inputs that this trained model produced.
+#### Chill Lofi: 
+
+
+https://github.com/user-attachments/assets/d6873e7c-47ec-4a87-895d-fc32ef69912d
+#### Upbeat Music:
+
+https://github.com/user-attachments/assets/3774d84f-6984-4dc4-9a89-e31f571a941e
+#### Baroque: 
+
+https://github.com/user-attachments/assets/1c21fd01-e72e-4f06-a851-7c290275b293
+#### Classical:
+
+https://github.com/user-attachments/assets/6d243b2d-efc2-48d3-99cb-6e436e243c42
+
+
+
+
+
+
