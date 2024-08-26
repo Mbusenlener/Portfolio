@@ -1,6 +1,13 @@
 # Music Transformer 
 This transformer-based music generator is trained autoregressively on a dataset of 51000 musical WAV format stereo-audio sequences and simple text pairings denoting genre and sentiment that I programmatically scraped from the web. Audio sequences are sampled as 30-second clips for training to reduce the computational burden of a large attentional context size stemming from a high sampling rate. To further combat costs in compute and memory, this model utilizes FAVOR+ attention and a Reversible architecture.
 
+## Code Map
+* compress.py: Preprocessing script for compressing training audio sequences with Encodec and exporting dataset as .h5 files for loading during training.
+* model.py: Music Generator Transformer architecture implemented as a Pytorch module.
+* deploy.py: Training deployment script that loads data files prepared by compress.py and initiates training.
+* train.py: Training module used in deploy.py. Contains the core training loop.
+* generate.py: Script for generating unique musical sequences given a pretrained model checkpoint produced from deploy.py. Takes an input description from the user, generates corresponding musical sequence, and exports the 10s sequence to mp3.
+
 ## Training
 During training, this model learns to predict each note in a musical sequence given the notes that come before using causal masking. During preprocessing, all 30-second WAV audio sequences are encoded with Encodec, a pretrained high-fidelity neural audio codec, into in a discrete latent representation with four codebook features by 4500 timesteps and a token vocabulary size of 1024. This model predicts the four codebooks in parallel, leveraging a unique embedding layer for each parallel stream that projects the features onto a shared embedding space as input to the transformer. The outputs of the transformer are then projected with four unique dense layers onto the the audio token vocabulary space to produce logits for each of the four codebooks of the predicted timestep. During transformer decoding, this model performs causal masked self-attention on the embedded musical sequences as well as unmasked cross-attention on the text-description labels that have been encoded with a pretrained BERT language encoder. Through this training setup, the model learns to predict training sequences with text conditioning.
 
