@@ -2,6 +2,14 @@
 My name is Matthew Busenlener, and I am a fourth-year student at USC studying Computer Science and Cognitive Science with an emphasis in AI. This repository hosts my AI and SWE related personal projects.
 
 # Projects
+### Latent Memory-Augmented LLM
+* A memory-augmented LLM that encodes previous hidden states into latent memory tokens that are “recalled” during decoding.
+* This model achieves a 22% improvement in F1 on HotpotQA compared to the In-Context baseline while compressing long contexts by 8x.
+* https
+### Multi-Class Adaptive Rag
+* RAG pipeline that predicts two unique kinds of hallucinations from the LLM’s hidden states: 1. Hallucination due to lack of parametric knowledge and 2. Hallucination despite parametric knowledge.
+* The classifier achieves 62% balanced 3-class accuracy and dynamically routes the prompt to RAG retrieval, soft-prompt denoising, or direct generation, mitigating most hallucinations while maintaining token-efficiency.
+* https://github.com/Hallucination-Detection-CSCI544/HallucinationDetection
 ### AI Music Generator
 * A transformer-based Pytorch model trained from scratch that generates original, polyphonic music from text descriptions.
 * This model uses reversible layers and FAVOR+ attention to handle sequences up to 4500 tokens.
